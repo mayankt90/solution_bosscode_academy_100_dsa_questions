@@ -19,3 +19,22 @@ Output: -5
 ############################################### Solution In Python ##################################################
 
 #Solution 1: Brute Force 
+
+def kthSmallest(matrix, k):
+    arr = []
+    i_table = len(matrix)
+    j_table = len(matrix[0])
+    for i in range(i_table):
+        for j in range(j_table):
+            arr.append(matrix[i][j])
+    arr.sort()
+    return arr[k-1]
+
+print(kthSmallest([[1,5,9],[10,11,13],[12,13,15]], 8))
+print(kthSmallest([[-5]], 1))
+
+
+    
+
+
+            
